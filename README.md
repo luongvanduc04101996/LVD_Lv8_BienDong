@@ -1,14 +1,14 @@
 # I.Khái niệm  
 
 ## a/Biến động
-   * Là các biến được tạo ra lúc chạy chương trình, tùy theo nhu cầu. Do vậy, mà số biến này hoàn toàn không được xác định từ trước.
-   Các biến được tạo ra
-   như vậy được gọi là các biến động. Các biến động không có tên (vì việc đặt tên thực chất là gán cho nó một địa chỉ xác định).  
+   * Là các biến được tạo ra lúc chạy chương trình, tùy theo nhu cầu. 
+   * Do vậy, mà số biến này hoàn toàn không được xác định từ trước.
+   * Các biến được tạo ra như vậy được gọi là các biến động. Các biến động không có tên (vì việc đặt tên thực chất là gán cho nó một địa chỉ xác định).  
    
 ## b/Cách tạo ra biến động và truy nhập đến biến động
 * Việc tạo ra biến động và xóa nó đi (để thu hồi lại bộ nhớ) được thực hiện nhờ các hàm như malloc() và free() đã có sẵn trong stdlib.h 
-Việc truy nhập đến biến động được tiến hành nhờ các biến con trỏ. 
-Các biến con trỏ được định nghĩa như các biến tĩnh ( được khai báo ngay từ đầu trong phần khai báo biến)
+* Việc truy nhập đến biến động được tiến hành nhờ các biến con trỏ. 
+* Các biến con trỏ được định nghĩa như các biến tĩnh ( được khai báo ngay từ đầu trong phần khai báo biến)
 và được dùng để chứa địa chỉ các biến động. 
 * **vd**:	int *p; /* Khai báo biến con trỏ p*/  
 			p= (int *) malloc(100);/* Tạo biến động*/  
@@ -37,7 +37,7 @@ getch();
 ## b/Cấp phát bộ nhớ động bằng hàm calloc() 
 * **Cú pháp:** 
 `(datatype *) calloc(n, sizeof(object));`  
-**Chức năng của hàm là:** cấp phát bộ nhớ động cho các kiểu dữ liệu (có thể là những kiểu dữ liệu không phải kiểu cơ sở)  
+**Chức năng:** cấp phát bộ nhớ động cho các kiểu dữ liệu (có thể là những kiểu dữ liệu không phải kiểu cơ sở)  
 * **Trong đó:**  
 datatype *) là kiểu con trỏ trỏ tới kiểu dữ liệu datatype. n là số lượng object thuộc kiểu datatype mà ta cần cấp phát bộ nhớ.
 Kiểu datatype có thể là những kiểu dữ liệu mới do người lập trình sáng tạo ra.  
@@ -52,7 +52,7 @@ calloc(10, sizeof(struct sv));
 
 ## c/Cấp phát bộ nhớ động bằng hàm relloc() 
 * **Cú pháp:** `(datatype *) realloc(buf _p, newsize);`   
- **Phân tích Chức năng:** Hàm cấp phát lại bộ nhớ  
+ **Chức năng:** Hàm cấp phát lại bộ nhớ  
 * **Trong đó:**  
  * buf_p là con trỏ đang trỏ đến vùng ô nhớ đã được cấp phát từ trước.  
  * newsize là kích thước mới cần cấp phát, có thể to hoặc nhỏ hơn.  
